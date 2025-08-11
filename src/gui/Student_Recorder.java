@@ -6,8 +6,11 @@
 package gui;
 
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import static java.lang.Integer.parseInt;
 import java.util.ArrayList;
@@ -329,6 +332,16 @@ public class Student_Recorder extends javax.swing.JFrame {
     //Method reloads the student added to the binary file
     private void studentLoader(){
         
+        try
+           {
+            File myStudent = new File("studentFile.dat");
+                           if(myStudent.exists()){
+                               ObjectInputStream in = new ObjectInputStream(new FileInputStream(myStudent));
+                               arrStudent = (ArrayList<Student>) in.readObject();
+                           }
+           }catch(IOException | ClassNotFoundException e){
+               JOptionPane.showMessageDialog(this, "Error loading data from file");
+           }
     }
     private void btnView1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnView1ActionPerformed
         // TODO add your handling code here:
