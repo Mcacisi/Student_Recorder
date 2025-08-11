@@ -24,3 +24,6 @@ This is student mark to record their marks and check their progress for the seme
 INSTALLATION
 -copy github url
 -use gitbash to clone & download latest code to your local laptop
+
+AUTHOR
+-mcacisisithole@gmail.com
