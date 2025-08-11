@@ -5,12 +5,14 @@
  */
 package mcacisi;
 
+import java.io.Serializable;
+
 /**
  *THIS IS A PROTOTYPE PROGRAM TO IMPROVE MY BASIC JAVA SKILLS
  * STUDENT MARK RECORDER FOR STUDENT TO STORE MARKS & CHECK THEIR OWN PROGRESS IN EACH MODULE
  * @author Mcacisi Sithole
  */
-public class Student {
+public class Student implements Serializable{
     
     private String studNo;
     private String initials;
